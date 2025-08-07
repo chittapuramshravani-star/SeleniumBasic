@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="3">
+  <test  name="Test_fb">
+    <classes>
+      <class name="Testng.NavigateToFB"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test_flipkart">
+    <classes>
+      
+      <class name="Testng.NavigatetoFlipkart"/>
+          </classes>
+  </test> <!-- Test -->
+  <test name="Test_swiggy">
+    <classes>
+      <class name="Testng.NavigateToSwiggy"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

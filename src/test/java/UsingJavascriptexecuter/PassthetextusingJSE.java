@@ -1,0 +1,44 @@
+package UsingJavascriptexecuter;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PassthetextusingJSE {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		//launch the browser
+		WebDriver driver=new ChromeDriver();
+		
+		//Maximize the window
+		driver.manage().window().maximize();
+
+		//implicitly wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		//navigate to an app
+		driver.get("https://www.flipkart.com/");
+
+		WebElement searchTF=driver.findElement(By.name("q"));
+		
+		//pass the text using jse
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		//value is acting like send keys
+		//arg1 is textfield and agr2 is value that u want to enter
+		js.executeScript("arguments[0].value=arguments[1]", searchTF,"mobiles");
+		Thread.sleep(3000);
+		
+		//click on an element
+		WebElement cart=driver.findElement(By.xpath("//a[@title=\"Cart\"]"));
+		js.executeScript("arguments[0].click()",cart);
+		Thread.sleep(3000);
+		driver.quit();
+
+	}
+
+}

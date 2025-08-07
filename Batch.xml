@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Testng.UsingEnabledFlag"/>
+      <class name="Testng.UsingThreadPoolSizeFlag"/>
+      <class name="Testng.UsingInvocationCount"/>
+      <class name="Testng.UsingPriorityFlag"/>
+      <class name="Testng.UsingDependsonMethodFlag"/>
+      <class name="Testng.CreateAsimpletest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
