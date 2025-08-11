@@ -10,7 +10,7 @@ public class UsingClassNamelocator {
 		// TODO Auto-generated method stub
 		//while using classname we should remove spaces
 		//launch the browser
-		WebDriver driver=new EdgeDriver();
+		WebDriver driver=new ChromeDriver();
 		
 		//maximize the window
 		driver.manage().window().maximize();
